@@ -1,0 +1,12 @@
+{
+	"name": "Httpgitsinglefile",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://github.com/pks07pro/datasets/tree/main/olist_ecommarce/olist_sellers_dataset.csv",
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
