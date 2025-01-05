@@ -6,7 +6,7 @@
 		"type": "HttpServer",
 		"typeProperties": {
 			"url": "https://github.com/pks07pro/datasets/tree/main/olist_ecommarce",
-			"enableServerCertificateValidation": true,
+			"enableServerCertificateValidation": false,
 			"authenticationType": "Anonymous"
 		}
 	}
