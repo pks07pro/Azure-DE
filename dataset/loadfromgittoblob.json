@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "olist.csv",
+				"fileName": "olist_seller_details.csv",
 				"folderPath": "http_git",
 				"fileSystem": "bronze"
 			},
