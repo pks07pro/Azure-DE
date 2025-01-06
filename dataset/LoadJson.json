@@ -1,0 +1,23 @@
+{
+	"name": "LoadJson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HTTP_LINKSERVICE_CSV",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "datasets/refs/heads/main/olist_ecommarce/datasets_details.json"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": null
+		},
+		"schema": []
+	}
+}
