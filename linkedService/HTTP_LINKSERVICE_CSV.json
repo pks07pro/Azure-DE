@@ -5,7 +5,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://raw.githubusercontent.com/pks07pro/datasets/refs/heads/main/olist_ecommarce/",
+			"url": "https://raw.githubusercontent.com/pks07pro/",
 			"enableServerCertificateValidation": false,
 			"authenticationType": "Anonymous"
 		}
