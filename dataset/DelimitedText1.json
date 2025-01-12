@@ -5,6 +5,11 @@
 			"referenceName": "GIT_to_ADF_LS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"csv_url": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
