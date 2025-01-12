@@ -68,7 +68,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.foreachparam",
+						"value": "@activity('For each Copy Activity').output",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -120,13 +120,25 @@
 							"inputs": [
 								{
 									"referenceName": "DelimitedText1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"csv_url": {
+											"value": "@item().csv_relative_url",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "ADF_to_ADLS_sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name": {
+											"value": "@item().filename",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
@@ -140,9 +152,15 @@
 				"defaultValue": [
 					{
 						"csv_relative_url": "/datasets/refs/heads/main/olist_ecommarce/olist_sellers_dataset.csv",
-						"file_name": "olist_sellers_dataset.csv"
+						"filename": "olist_sellers_dataset.csv"
 					}
 				]
+			}
+		},
+		"variables": {
+			"BaseURL": {
+				"type": "String",
+				"defaultValue": "https://raw.githubusercontent.com/pks07pro/"
 			}
 		},
 		"annotations": []
