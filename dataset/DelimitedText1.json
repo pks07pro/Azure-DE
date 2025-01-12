@@ -9,10 +9,10 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "datasets/refs/heads/main/olist_ecommarce/olist_sellers_dataset.csv"
+				"type": "HttpServerLocation"
 			},
 			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
