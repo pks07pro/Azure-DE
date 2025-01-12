@@ -137,12 +137,7 @@
 		"parameters": {
 			"foreachparam": {
 				"type": "array",
-				"defaultValue": [
-					{
-						"csv_relative_url": "datasets/refs/heads/main/olist_ecommarce/olist_sellers_dataset.csv",
-						"filename": "olist_sellers_dataset.csv"
-					}
-				]
+				"defaultValue": "[{csv_relative_url:\"datasets/refs/heads/main/olist_ecommarce/olist_sellers_dataset.csv\",filename:\"olist_sellers_dataset.csv\"}]"
 			}
 		},
 		"annotations": []
