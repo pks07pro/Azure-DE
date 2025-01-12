@@ -58,8 +58,24 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
+		"parameters": {
+			"foreachparam": {
+				"type": "array",
+				"defaultValue": [
+					{
+						"datasets/refs/heads/main/olist_ecommarce/olist_sellers_dataset.csv": "olist_sellers_dataset.csv"
+					}
+				]
+			}
+		},
 		"annotations": []
 	}
 }
