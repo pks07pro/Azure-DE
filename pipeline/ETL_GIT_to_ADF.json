@@ -68,13 +68,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('For each Copy Activity').output",
+						"value": "@pipeline().parameters.foreachparam",
 						"type": "Expression"
 					},
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "For each Copy Activity",
+							"name": "copyinsideforeachloop",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
