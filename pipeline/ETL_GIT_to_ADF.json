@@ -89,8 +89,9 @@
 								"source": {
 									"type": "DelimitedTextSource",
 									"storeSettings": {
-										"type": "HttpReadSettings",
-										"requestMethod": "GET"
+										"type": "AzureBlobFSReadSettings",
+										"recursive": true,
+										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"
@@ -122,7 +123,7 @@
 									"referenceName": "DelimitedText1",
 									"type": "DatasetReference",
 									"parameters": {
-										"csv_url": {
+										"csv_relative_url": {
 											"value": "@item().csv_relative_url",
 											"type": "Expression"
 										}
@@ -155,12 +156,6 @@
 						"filename": "olist_sellers_dataset.csv"
 					}
 				]
-			}
-		},
-		"variables": {
-			"BaseURL": {
-				"type": "String",
-				"defaultValue": "https://raw.githubusercontent.com/pks07pro/"
 			}
 		},
 		"annotations": []
