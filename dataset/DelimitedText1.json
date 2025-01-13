@@ -16,7 +16,7 @@
 			"location": {
 				"type": "HttpServerLocation",
 				"relativeUrl": {
-					"value": "@dataset().csv_url",
+					"value": "@dataset().csv_relative_url",
 					"type": "Expression"
 				}
 			},
