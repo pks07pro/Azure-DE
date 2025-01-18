@@ -68,13 +68,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.foreachparam",
+						"value": "@activity('For each Copy Activity').output",
 						"type": "Expression"
 					},
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "copyinsideforeachloop",
+							"name": "For each Copy Activity",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -89,9 +89,8 @@
 								"source": {
 									"type": "DelimitedTextSource",
 									"storeSettings": {
-										"type": "AzureBlobFSReadSettings",
-										"recursive": true,
-										"enablePartitionDiscovery": false
+										"type": "HttpReadSettings",
+										"requestMethod": "GET"
 									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"
@@ -123,7 +122,7 @@
 									"referenceName": "DelimitedText1",
 									"type": "DatasetReference",
 									"parameters": {
-										"csv_relative_url": {
+										"csv_url": {
 											"value": "@item().csv_relative_url",
 											"type": "Expression"
 										}
@@ -147,9 +146,9 @@
 				}
 			}
 		],
-		"parameters": {
+		"variables": {
 			"foreachparam": {
-				"type": "array",
+				"type": "Array",
 				"defaultValue": [
 					{
 						"csv_relative_url": "datasets/refs/heads/main/olist_ecommarce/olist_sellers_dataset.csv",
